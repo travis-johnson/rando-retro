@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -95,4 +96,11 @@ body {
   bottom: -1.175em;
   left: -0.475em;
   transform: rotateZ(45deg);
+}
+#desc h2#title {
+  text-align: center;
+  font-family: 'Creepster', cursive;
+  color: #c22525;
+  letter-spacing: 2px;
+  font-weight: 400;
 }

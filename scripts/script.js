@@ -28,6 +28,8 @@ $(document).ready(function () {
         var data = response.results[Math.floor(Math.random()*response.results.length)];
         console.log(data);
         $('#poster').attr('src', 'https://image.tmdb.org/t/p/w780'+ data.poster_path)
+        $('#title').append(data.title)
+        $('#desc > p').append(data.overview);
       });
 });
   
