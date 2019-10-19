@@ -1,4 +1,98 @@
-img#poster {
-  width: 50%;
-  height: auto;
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(90deg, #494b4a, #1d1c1a);
+}
+#container {
+  width: 30%;
+  font-size: 10px;
+}
+@media (min-width: 800px) {
+  #container {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  #container {
+    font-size: 20px;
+  }
+}
+.frame--dark {
+  border: 1em solid #4b4b4b;
+  border-left-color: #313131;
+  border-right-color: #2f2f2f;
+  border-bottom-color: #222;
+}
+.frame {
+  transition: border-color 0.25s ease-in-out;
+  width: 100%;
+  height: 0;
+  padding-bottom: 142.4%;
+  position: relative;
+  border-radius: .1em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1), 0.15em 1em 0.7em rgba(0, 0, 0, 0.1), 0.1em 0.5em 0.5em rgba(0, 0, 0, 0.1);
+}
+.frame__inner-shadow,
+.frame__poster,
+.frame__top-marks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.frame__inner-shadow {
+  background: linear-gradient(-60deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  box-shadow: inset 0.1em 0.3em 0.25em rgba(0, 0, 0, 0.1), inset 0 0 0.4em rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.frame__poster {
+  background: white;
+}
+.frame__poster img#poster {
+  width: 100%;
+  height: 100%;
+}
+.frame__top-marks:before,
+.frame__top-marks:after,
+.frame__bottom-marks:before,
+.frame__bottom-marks:after {
+  content: '';
+  width: .1em;
+  height: 1.4em;
+  margin: -0.7em 0 0 -0.05em;
+  background: linear-gradient(90deg, transparent, black, transparent);
+  opacity: .1;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  transform-origin: center center;
+  border-radius: 100%;
+}
+.frame__top-marks:before {
+  top: -0.475em;
+  right: -0.525em;
+  transform: rotateZ(45deg);
+}
+.frame__top-marks:after {
+  top: -0.475em;
+  left: -0.475em;
+  transform: rotateZ(-45deg);
+}
+.frame__bottom-marks:before {
+  bottom: -1.175em;
+  right: -0.525em;
+  transform: rotateZ(-45deg);
+}
+.frame__bottom-marks:after {
+  bottom: -1.175em;
+  left: -0.475em;
+  transform: rotateZ(45deg);
 }
