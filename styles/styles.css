@@ -6,11 +6,6 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   background: linear-gradient(90deg, #494b4a, #1d1c1a);
 }
 #container {
@@ -97,10 +92,11 @@ body {
   left: -0.475em;
   transform: rotateZ(45deg);
 }
-#desc h2#title {
+#desc h1#title {
   text-align: center;
-  font-family: 'Creepster', cursive;
+  font-family: 'ghoulish_fright_aoeregular';
   color: #c22525;
   letter-spacing: 2px;
   font-weight: 400;
+  margin: 0;
 }
