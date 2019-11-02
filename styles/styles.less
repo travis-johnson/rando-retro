@@ -1,119 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
 
 
-* {
-    box-sizing: border-box;
-  }
-  
-  html {
-    height: 100%;
-  }
 
-body {
+
+html {
     background: linear-gradient(90deg, rgb(73, 75, 74), rgb(29, 28, 26));
+    height: 100vh;
   }
 
-  #container {
-    width: 35%;
-    font-size: 10px;
-    
-    @media (min-width: 800px) {
-      font-size: 15px;
-    }
-    
-    @media (min-width: 1200px) {
-      font-size: 20px;
-    }
-  }
+  
+.image{
+  #poster{
+    width: 90%;
+    margin: 3em 0;
+    box-shadow: -3px 10px 21px 7px #0a0a0a;
 
-  .frame--dark {
-    border: 1em solid lighten(#222, 16%);
-    border-left-color: lighten(#222, 6%);
-    border-right-color: lighten(#222, 5%);
-    border-bottom-color: #222;
   }
+}
 
-  .frame {
-    transition: border-color .25s ease-in-out;
-    width: 100%;
-    height: 0;
-    padding-bottom: 142.4%;
-    position: relative;
-    border-radius: .1em;
-    box-shadow: 0 0 .5em rgba(0, 0, 0, .1), .15em 1em .7em rgba(0, 0, 0, .1), .1em .5em .5em rgba(0, 0, 0, .1);
-    
-    &__inner-shadow,
-    &__poster,
-    &__top-marks {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-    
-    &__inner-shadow {
-      background: linear-gradient(-60deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
-      box-shadow: inset .1em .3em .25em rgba(0, 0, 0, .1), inset 0 0 .4em rgba(0, 0, 0, .2);
-      z-index: 1;
-    }
-    
-    &__poster {
-      background: white;
-      img#poster{
-        width: 100%;
-        height: 100%;
-    }
-    }
-    
-    &__top-marks:before,
-    &__top-marks:after,
-    &__bottom-marks:before,
-    &__bottom-marks:after {
-      content: '';
-      width: .1em;
-      height: 1.4em;
-      margin: -.7em 0 0 -.05em;
-      background: linear-gradient(90deg, transparent, black, transparent);
-      opacity: .1;
-      display: block;
-      position: absolute;
-      z-index: 1;
-      transform-origin: center center;
-      border-radius: 100%;
-    }
-    
-    &__top-marks:before {
-      top: -.475em;
-      right: -.525em;
-      transform: rotateZ(45deg);
-    }
-    
-    &__top-marks:after {
-      top: -.475em;
-      left: -.475em;
-      transform: rotateZ(-45deg);
-    }
-    
-    
-    &__bottom-marks:before {
-      bottom: -1.175em;
-      right: -.525em;
-      transform: rotateZ(-45deg);
-    }
-    
-    &__bottom-marks:after {
-      bottom: -1.175em;
-      left: -.475em;
-      transform: rotateZ(45deg);
-    }
-  }
 
 #desc{
-    h1#title{
+    h1#movie_title{
         text-align: center;
         font-family: 'ghoulish_fright_aoeregular';
         color: rgb(194, 37, 37);
         letter-spacing: 2px;
         font-weight: 400;
-        margin: 0;
+    }
+    p{
+      font-size: 16px;
     }
 }

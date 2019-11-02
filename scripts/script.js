@@ -27,8 +27,9 @@ $(document).ready(function () {
         var key = '&api_key=a751d6f146daca63096db49c63690e9f';
         var data = response.results[Math.floor(Math.random()*response.results.length)];
         console.log(data);
-        $('#poster').attr('src', 'https://image.tmdb.org/t/p/w780'+ data.poster_path)
-        $('#title').append(data.title)
+        $('#poster').attr('src', 'https://image.tmdb.org/t/p/w500'+ data.poster_path)
+        $('#poster').attr('alt', data.title)
+        $('#movie_title').append(data.title)
         $('#desc > p').append(data.overview);
       }).fail(function(textStatus) { 
         location.reload();
