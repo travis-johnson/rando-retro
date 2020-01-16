@@ -5,14 +5,22 @@
   font-display: swap;
   src: local('Creepster'), local('Creepster-Regular'), url(https://fonts.gstatic.com/s/creepster/v8/AlZy_zVUqJz4yMrniH4Rcn38.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Heebo Light'), local('Heebo-Light'), url(https://fonts.gstatic.com/s/heebo/v5/NGS3v5_NC0k9P9ldb6RMkKs.ttf) format('truetype');
+}
 html {
   background: linear-gradient(90deg, #494b4a, #1d1c1a);
-  height: 100vh;
+}
+#poster_container {
+  margin-top: 25px;
 }
 .image #poster {
-  width: 90%;
-  margin: 3em 0;
   box-shadow: -3px 10px 21px 7px #0a0a0a;
+  max-width: 30vw;
 }
 #desc h1#movie_title {
   text-align: center;
@@ -22,5 +30,7 @@ html {
   font-weight: 400;
 }
 #desc p {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
   font-size: 16px;
 }
